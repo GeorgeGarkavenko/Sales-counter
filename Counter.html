@@ -1,0 +1,227 @@
+<!--Version 3_6, bought quantity, script view -->
+
+<input type="button" value="Have bought" onclick='
+
+main_count_products();
+
+function main_count_products() {
+
+  var BRAND_NAME = "Alicja";
+  
+  var total_quantity = 0;
+
+  var quantitys = {8383002:{"XL":1},8383006:{"S":1, "M":1, "L":1, "XL":1, "XXXL":1},8383008:{"L":1, "XXXL":1},8383009:{"S":1, "M":1, "L":1, "XL":1, "XXL":1},8383013:{"M":1, "L":1, "XL":1},8383014:{"S":1, "M":1, "L":1, "XL":1},8383016:{"XXXL":1},8383018:{"M":1, "XXL":1},8383021:{"S":1, "XL":1},8383022:{"M":1, "L":1, "XL":1, "XXL":1},8383028:{"L":1, "XL":1, "XXL":1},8383033:{"M":1, "L":1, "XL":1},8383036:{"M":2},8383037:{"M":1, "L":1, "XL":1, "XXL":1},8383038:{"M":1, "L":1, "XL":1},8383039:{"M":1, "L":1, "XL":1},8383049:{"XL":1},8383050:{"S":1},8383057:{"M":1, "L":1, "XL":1, "XXXL":1, "XXXXL":1},8383058:{"M":1, "L":1, "XXXL":1},8383063:{"S":1, "M":1, "L":1, "XL":1, "XXL":1, "XXXL":1},8383065:{"M":1, "L":1, "XL":1},8383068:{"M":1, "L":1},8383077:{"S":2, "M":2, "L":2, "XL":2, "XXL":2},8383078:{"S":1, "L":1, "XXL":1},8383082:{"M":1},8383084:{"S":1},8383085:{"S":1, "XL":1},8383100:{"XL":1},8383102:{"M":1, "L":1, "XL":1},8383103:{"M":1, "L":1, "XL":1},8383105:{"M":1, "L":1},8383106:{"L":1, "XL":1},8383107:{"L":1},8383115:{"M":1},8383121:{"XL":1},8383124:{"M":1, "L":1, "XL":1},8383126:{"L":1},8383127:{"M":1, "L":1},8383133:{"XL":1},8383143:{"M":1, "L":1},8383154:{"S":1, "M":1},8383167:{"XL":1, "XXL":1},8383175:{"M":1},8383210:{"M":1, "L":1, "XL":1},8383216:{"M":1},8383217:{"L":1, "XL":1},8383218:{"M":2, "L":2, "XL":2, "XXL":2},8383220:{"L":2, "XL":2},8383222:{"L":2, "XL":2},8383223:{"M":1, "L":1},8383224:{"M":1, "L":1},8383226:{"M":1, "L":1},8383234:{"S":1, "M":1, "L":1, "XL":1, "XXL":1},8383241:{"S":1, "M":1, "L":1, "XL":1, "XXL":1},
+  1383077:{"L":1},1383007:{"L":1},1383150:{"S":1}};
+
+  var keys = {"1871562":"8383001","1871563":"8383002","1871564":"8383003","1871565":"8383004","1871566":"8383005","1871567":"8383006","1871568":"8383007","1871569":"8383008","1871570":"8383009","1871571":"8383010","1871572":"8383011","1871573":"8383012","1871574":"8383013","1871575":"8383014","1871576":"8383015","1871577":"8383016","1871578":"8383017","1871579":"8383018","1871580":"8383019","1871581":"8383020","1871582":"8383021","1871583":"8383022","1871585":"8383024","1871586":"8383025","1871587":"8383026","1871588":"8383027","1871589":"8383028","1871590":"8383029","1889568":"8383030","1889569":"8383031","1889570":"8383032","1889571":"8383033","1889572":"8383034","1889573":"8383035","1889574":"8383036","1889575":"8383037","1889576":"8383038","1889577":"8383039","1889578":"8383040","1913025":"8383041","1913026":"8383042","1913027":"8383043","1913028":"8383044","1913029":"8383045","1913030":"8383046","1913031":"8383047","1913032":"8383048","1913033":"8383049","1913034":"8383050","1913035":"8383051","1930016":"8383052","1930017":"8383053","1930018":"8383054","1930019":"8383055","1930020":"8383056","1930021":"8383057","1930022":"8383058","1930023":"8383059","1930024":"8383060","1930025":"8383061","1930026":"8383062","1930027":"8383063","1930028":"8383064","1930029":"8383065","1951908":"8383066","1951909":"8383067","1951910":"8383068","1951911":"8383069","1951912":"8383070","1951913":"8383071","1951914":"8383072","1951915":"8383073","1951916":"8383074","1951917":"8383075","1976532":"8383076","1976525":"8383077","1976526":"8383078","1976527":"8383079","1976531":"8383080","1976530":"8383081","1976534":"8383082","1976528":"8383083","1976533":"8383084","1976529":"8383085","1976524":"8383086","1976523":"8383087","2003398":"8383088","2003399":"8383089","2003400":"8383090","2003401":"8383091","2003402":"8383092","2003403":"8383093","2003404":"8383094","2003405":"8383095","2003406":"8383096","2003407":"8383097","2003408":"8383098","2024739":"8383103","2024741":"8383104","2024743":"8383105","2024745":"8383106","2024747":"8383107","2024749":"8383108","2024750":"8383109","2024752":"8383110","2028652":"8383111","2105040":"8383114","2105042":"8383115","2105044":"8383116","2105046":"8383117","2105048":"8383118","2105049":"8383119","2105051":"8383120","2105052":"8383121","2105053":"8383122","2138236":"8383123","2138237":"8383124","2138238":"8383125","2138239":"8383126","2138240":"8383127","2138241":"8383128","2138242":"8383129","2138243":"8383130","2138244":"8383131","2138245":"8383132","2138246":"8383133","2138247":"8383134","2138248":"8383135","2138249":"8383136","2138250":"8383137","2138251":"8383138","2172143":"8383139","2172144":"8383140","2172145":"8383141","2172146":"8383142","2172147":"8383143","2172148":"8383144","2172149":"8383145","2172150":"8383146","2172151":"8383147","2172152":"8383148","2246008":"8383149","2246014":"8383150","2246021":"8383151","2246027":"8383152","2246033":"8383153","2246040":"8383154","2246044":"8383155","2246051":"8383156","2246054":"8383157","2246061":"8383158","2246064":"8383159","2246070":"8383160","2246073":"8383161","2246078":"8383162","2246083":"8383163","2319501":"8383164","2319502":"8383165","2319503":"8383166","2319504":"8383167","2319505":"8383168","2319506":"8383169","2319507":"8383170","2319508":"8383171","2319509":"8383172","2319510":"8383173","2319511":"8383174","2319512":"8383175","2499213":"8383176","2436372":"8383180","2401272":"8383189","2401273":"8383190","2401274":"8383191","2469226":"8383192","2401275":"8383193","2436374":"8383194","2401276":"8383195","2401277":"8383196","2401278":"8383197","2469231":"8383198","2469233":"8383199","2469234":"8383200","2469236":"8383201","2469238":"8383202","2469239":"8383203","2469241":"8383204","2469243":"8383205","2499214":"8383206","2499215":"8383207","2499216":"8383208","2532636":"8383209","2499217":"8383210","2532637":"8383211","2532638":"8383212","2532639":"8383213","2532640":"8383214","2532641":"8383215","2499218":"8383216","2532642":"8383217","2532643":"8383218","2532644":"8383219","2532645":"8383220","2532646":"8383221","2532647":"8383222","2532648":"8383223","2532649":"8383224","2532650":"8383225","2562892":"8383226","2562893":"8383227","2562894":"8383228","2562895":"8383229","2562896":"8383233","2562897":"8383234","2593527":"8383235","2593525":"8383236","2562898":"8383241","2675150":"8383243","2675151":"8383244","2675152":"8383257","2675153":"8383258","2614348":"1383077","2606267":"1383007","2606266":"1383150" };
+
+  deleteRecommendatioins();
+  
+  var positions_list = getPositioinsList();
+  
+  var POSITIONS_QUANTITY = positions_list.length;
+  
+  checkPositions();
+
+ 
+  function deleteRecommendatioins() {
+    var recommendations = document.getElementsByClassName("recommendations");
+    if ( isNotEmpty(recommendations) ) {
+      for (var i = 0; i < recommendations.length; i++ ) {
+        removeElement(recommendations[i]);
+      }
+    }
+  };
+  
+  function isNotEmpty(collection) {
+    return collection.length != 0;
+  }
+ 
+  function removeElement(element) {
+    element.parentNode.removeChild(element);
+  }
+ 
+  function getPositioinsList() {
+    var positions_elements = document.getElementsByClassName("product js-product");
+    var positions_list = [].slice.call(positions_elements);
+    return positions_list;
+  };
+
+  // MAIN PATH function 
+  function checkPositions() {
+    if (isNotEmpty(positions_list)) {
+      var current_position = positions_list.pop();
+      var current_article = getArticle(current_position);
+      if (articleWithNoQuantity(current_article)) {
+        removeElement(current_position);
+        console.log("Absent quantity article: " + current_article);
+        checkPositions();
+      } else if (isSouldOutInList(current_position)) {
+        handleSouldOut(current_article, current_position);
+        checkPositions();
+      } else if (isExist(current_article)){
+        var page_position = getNewPageOnPosition(current_position);
+        page_position.onload = function () {
+          waitWrapper(current_article, current_position, page_position, pageImmediateHandler);
+        };
+      } else {
+          checkPositions();
+      }
+    }
+  };
+
+  function getArticle(position_element) {
+    var product_code = position_element.getAttribute("product-code");
+    var article = keys[product_code];
+    return parseInt(article);
+  }
+
+  function articleWithNoQuantity(article) {
+    var quantity = quantitys[article];
+    return isExist(article) && isNotExist(quantity);
+  }
+
+  function isNotExist(argument) {
+    return !Boolean(argument);
+  }
+  
+  function isExist(argument) {
+    return Boolean(argument);
+  }
+
+  function isSouldOutInList(element) {
+    return element.getElementsByClassName("sticker sold-out js-sold-out").length != 0;
+  }
+
+  function handleSouldOut(article, position) {
+    var quantitys_of_article = quantitys[article];
+    total_quantity += getSummOf( quantitys_of_article );
+    updateTitleQuantity(total_quantity);
+    signPosition(article, position, JSON.stringify(quantitys_of_article) );
+  }
+
+  function getSummOf(quantitys) {
+    var total = 0;
+    for(var size in quantitys)
+      total += quantitys[size];
+    return total;
+  }
+ 
+  function updateTitleQuantity(quantity) {
+    var title = getByTagIn(document, "title");
+    var progress = " (" + (POSITIONS_QUANTITY - positions_list.length) + "/" + POSITIONS_QUANTITY +")";
+    if (isNotEmpty(positions_list)) {
+      title.innerHTML = "" + BRAND_NAME + " " + quantity + progress;
+    } else {
+      var pager = getByClassIn(document, "pager-bar");
+      var currentPage = pager ? getByClassIn(pager, "current").textContent : 1;
+      title.innerHTML = currentPage + " " + BRAND_NAME + " (" + quantity + ")";
+    }
+  }
+
+  function signPosition(article, position, quantitys_text) {
+    var product_name_element = getByClassIn(position, "p-name js-product-name");
+    product_name_element.innerHTML = article + ": " + product_name_element.innerHTML;
+    var product_quantity_element = getByClassIn(position, "p-brand js-brand-name");
+    product_quantity_element.innerHTML = quantitys_text;
+  } 
+
+  function getNewPageOnPosition(position) {
+    var image_element = getByClassIn(position, "imgs js-container-photo");
+    var reference = image_element.href;
+    return window.open(reference,"_blank");
+  }
+  
+  function getByClassIn(element, class_name) {
+	return element.getElementsByClassName(class_name)[0];
+  }
+
+  function getByTagIn(element, tag_name) {
+	return element.getElementsByTagName(tag_name)[0];
+  }
+  
+  function waitWrapper(article, position, page, routine) {
+    ( function()
+      {
+        if ( isQuantityElementLoded(page) || 
+             isSouldOutStickerOn(page) ) 
+	  // execute pageImmediateHandler as routine
+          routine(article, position, page)
+        else 
+          setTimeout(arguments.callee, 500);
+        }
+    )();
+  }
+
+  function isQuantityElementLoded(page) {
+    var quantity_element = getByClassIn(page.document, "js-quantity");
+    return isExist(quantity_element.textContent);
+  }
+
+  function isSouldOutStickerOn(page) {
+    var sould_out_sticker = getByClassIn(page.document, "sticker big slice-right sold-out js-sold-out"); 
+    return sould_out_sticker.textContent == "Распродано" && sould_out_sticker.getAttribute("style") != "display: none;";
+  }
+
+  function pageImmediateHandler(article, position, page) {
+    if (isSouldOutStickerOn(page)) {
+      handleSouldOut(article, position);
+    } else {
+      var sizes_element = getByClassIn(page.document, "product-size-list");
+      var sizes_list = sizes_element.getElementsByTagName("li");
+      var sell_sizes_result = getSizesSellResult(article, page, sizes_list);
+      if ( isEmptyDictionary(sell_sizes_result) ) {
+        removeElement(position);
+      } else {
+        signPosition( article, position, JSON.stringify(sell_sizes_result) );
+        total_quantity += getSummOf(sell_sizes_result);
+      }
+    }
+    updateTitleQuantity(total_quantity);
+    page.close();
+    checkPositions();
+  }
+
+  function getSizesSellResult(article, page, sizes) {
+    var sizes_result = {};
+    for (var i = 0; i < sizes.length; i++ ) {
+      var size_element = sizes[i];
+      var size_reference = getByTagIn(size_element, "a");
+      size_reference.click();
+      var size_name = size_reference.textContent;
+      var quantitys_of_article = quantitys[article];
+      var warehouse_size_quantity = quantitys_of_article[size_name];
+      if ( isSizeSouldOut(size_element) ) {
+        sizes_result[size_name] =  warehouse_size_quantity;
+      } else {
+        var reminder_size_quantity = getCurrnetQuantity(page);
+        var size_sold_quantity = warehouse_size_quantity - reminder_size_quantity;
+        if ( size_sold_quantity != 0 ) {
+          sizes_result[size_name] =  size_sold_quantity;
+        }
+      }
+    }
+    return sizes_result ;
+  }
+
+  function isSizeSouldOut(size) {
+    return size.className == "disabled"
+        || size.className == "disabled selected";
+  }
+
+  function getCurrnetQuantity(page) {
+    var quantity_element = getByClassIn(page.document, "js-quantity");
+    var quantity_text = quantity_element.textContent;
+    return parseInt(/\d{1,}/.exec(quantity_text));
+  }
+  
+  function isEmptyDictionary(dict) {
+    for(var key in dict)
+      return false; 
+    return true;
+  }
+
+}
+
+
+'>
