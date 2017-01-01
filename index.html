@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 </head>
 <body>
@@ -12,7 +11,7 @@
           
 function uploadAjax(url) {
             var request = new XMLHttpRequest();
-            request.open("GET", url, False);  
+            request.open("GET", url, false);  
             request.send();  
 
             if(request.status == 200) {   
