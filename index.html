@@ -7,9 +7,7 @@
 $(document).ready(function(){
         console.log("ready");
     
-        $.ajax({url: "https://leboutique.com/catalog/women?b=alicja", async: false, success: function(result){
-            var content_page = document.createElement( "html" );
-    		content_page.innerHTML = result;
+        $.ajax({url: "https://leboutique.com/api/v3/ru_UA/product/page/merge.json?code=1871570&dealCode=1622487", async: false, success: function(result){
             
             $("div").html(result);
         }}); 
