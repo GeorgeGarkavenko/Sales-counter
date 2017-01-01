@@ -4,8 +4,8 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
-$(document).ready(function(){
-          function uploadAjax(url) {
+          
+function uploadAjax(url) {
             var request = new XMLHttpRequest();
             request.open("GET", url, false);  
             request.send();  
@@ -16,13 +16,14 @@ $(document).ready(function(){
                 return null;
             }
           }
-    
-        $.ajax({url: "https://leboutique.com/api/v3/ru_UA/product/page/merge.json?code=1871570&dealCode=1622487", async: false, success: function(result){
-            
-            //$("div").html(result);
-        }}); 
-        
-        $("div").html(uploadAjax("https://leboutique.com/api/v3/ru_UA/product/page/merge.json?code=1871570&dealCode=1622487"));
+          
+          
+          
+$(document).ready(function(){
+          
+        $("div").html(
+                  uploadAjax("https://leboutique.com/api/v3/ru_UA/product/page/merge.json?code=1871570&dealCode=1622487")
+        );
 });
 </script>
 </head>
