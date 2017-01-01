@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    
+        $.ajax({url: "https://leboutique.com/catalog/women?b=alicja", async: false, success: function(result){
+            var content_page = document.createElement( "html" );
+    		content_page.innerHTML = result;
+            
+            $("div").html(content_page.getElementById("js-product-container").innerHTML);
+        }}); 
+});
+</script>
+</head>
+<body>
+<h2>Products:</h2>
+<div></div>
+
+</body>
+</html>
+
