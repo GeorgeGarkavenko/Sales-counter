@@ -3,11 +3,16 @@
 <html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+<h2>Products:</h2>
+<div></div>
 <script>
           
 function uploadAjax(url) {
             var request = new XMLHttpRequest();
-            request.open("GET", url, false);  
+            request.open("GET", url, False);  
             request.send();  
 
             if(request.status == 200) {   
@@ -19,18 +24,9 @@ function uploadAjax(url) {
           
           
           
-$(document).ready(function(){
+document.textContent = uploadAjax("https://leboutique.com/api/v3/ru_UA/product/page/merge.json?code=1871570&dealCode=1622487");
           
-        $("div").html(
-                  uploadAjax("https://leboutique.com/api/v3/ru_UA/product/page/merge.json?code=1871570&dealCode=1622487")
-        );
-});
 </script>
-</head>
-<body>
-<h2>Products:</h2>
-<div></div>
-
 </body>
 </html>
 
